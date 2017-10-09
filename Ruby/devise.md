@@ -84,3 +84,12 @@ Dans les routes, mentionner que l'on va utliser le controller pour les users.
 ```ruby
 devise_for :users, controllers {  }
 ```
+
+## Creation d'un user en production
+Comment créer un user en production ? Se mettre en console de prod avec `heroku run rails console`. Puis écrire la ligne suivante :
+
+```
+u = User.new(:email => 'test@example.com', :password => 'password', :password_confirmation => 'password')
+u.save
+```
+(bien entendu cela marche que s'il n'y a pas d'autre attribut en paramètre !)
