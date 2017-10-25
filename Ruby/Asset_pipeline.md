@@ -65,6 +65,11 @@ Par exemple, un lib que j'aime bien. Pour ceci, je vais mettre dans mon fichier 
 ```
 Pour les dossiers externes à l'application, il est recommandé de prendre le dossier `lib/assets` (on le mettra dans un dossier `stylesheets` pour les css, et un dossier `javascripts` pour les scripts). Ainsi, pour faire un bon appel à mon app, je vais devoir mettre mon_fichier dans `lib/assets/stylesheets/mon_fichier.extension`.
 
+Ne pas oublier de mettre dans le fichier `config/initializers/assets.rb` la ligne suivante :
+```ruby
+Rails.application.config.asset.precompile += %w(mon_css.css)
+```
+Puis de relancer le serveur.
 
 ## Avant de partir en prod
 Avant de partir en production, il est indispensable de précompiler les assets :
