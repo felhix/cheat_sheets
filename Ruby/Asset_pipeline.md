@@ -18,6 +18,7 @@ Avant de partir en production, il est indispensable de précompiler les assets :
 ```shell
 rails assets:precompile
 ```
+(on peut voir à quoi ça ressemble dans le fichier public)
 
 ## Remarques
 
