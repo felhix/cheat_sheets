@@ -47,6 +47,17 @@ Puis à la suite j'envoie mon css.
 Rails.application.config.asset.precompile += %w(mon_css.css)
 ```
 
+## J'ai envie d'avoir des css en fonction de mon controller
+Avec la ligne suivante, on peut avoir du css custom :
+```ruby
+<%= stylesheet_link_tag params[:controller] %>
+```
+Et il suffit de virer notre ami application, qui require_tree. Ne pas oublier de mettre dans le fichier `config/initializers/assets.rb` la ligne suivante :
+```ruby
+Rails.application.config.asset.precompile += %w(mon_css.css)
+```
+
+
 ## J'ai envie de charger des libs qu'on m'a filés
 Par exemple, un lib que j'aime bien. Pour ceci, je vais mettre dans mon fichier `application.scss` :
 ```css
