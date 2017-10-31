@@ -52,6 +52,31 @@ end
 Puis ajouter dans les views du dossier `registration` le field qui nous intéresse.
 
 
+### Changer les url des méthodes de Devise
+On peut changer les urls des méthodes de Devise, en mettant dans le fichier Routes `devise_scope`.
+```ruby
+devise_for :users, skip: [:registrations, :sessions]
+devise_scope :user do
+	get 'inscription', to: 'devise/registrations#new', as: :new_user_registration
+	post 'inscription', to: 'devise/registrations#create', as: :user_registration
+	get 'profil/editer', to: 'devise/registrations#edit', as: :edit_user_registration
+	post 'profil/editer', to: 'devise/registrations#update', as: :users_edit
+	get 'login', to: 'devise/sessions#new', as: :new_user_session
+	post 'login', to: 'devise/sessions#create', as: :user_session
+	delete 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
+end
+```
+Ainsi, là j'ai dit à Devise de `skip` les routes pour registrations (`#new` et `#edit` les users), et les sessions. Puis dans le devise_scope, je lui paremètre les méthodes importantes. Pour s'inscrire ce ne sera plus `/users/new`, mais `inscription`.
+
+### Changer de controller
+Pour changer de controller dans Devise pour certaines fonctions, rien de plus simple. Il faut mettre dans le fichier `routes.rb` :
+```ruby
+devise_for :users, controllers: { registrations: 'registrations' }
+```
+
+Ainsi, le controller `app/controllers/registrations_controller.rb` sera le controller de Devise pour tout ce qui concerne les registrations.
+
+
 ## Views
 Pour générer nos views :
 
