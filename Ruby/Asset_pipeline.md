@@ -78,6 +78,11 @@ rails assets:precompile
 ```
 (on peut voir à quoi ça ressemble dans le dossier `public/assets`)
 
+Si jamais des fichiers ont déjà été mis dans l'asset pipeline, il est possible de tout effaser et de refaire l'asset pipeline avec la commande suivante : 
+```shell
+rake assets:clean assets:precompile
+```
+
 ## Remarques
 
 ### Application.scss
