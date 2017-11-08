@@ -42,13 +42,26 @@ Pour quitter le log, il faut appuyer sur `Q`.
 Imaginons que l'on doit revenir en arrière.
 On va utiliser la commande `git checkout`
 
-- `git checkout 45581cebdd2cae494f80f44010af9e4a86c9b8fa` : on dit à git de se positionner sur ce sha précis.
+- `git checkout 45581cebdd2cae494f80f44010af9e4a86c9b8fa` : on dit à git de se positionner sur ce sha précis (cette commande ne sert qu'en lecture, si l'on veut revenir en arrière et modifier, aller un peu plus bas dnas le fichier).
 - `git checkout master` : revient sur le dernier commit
 
 ⚠️ `git checkout` ne marche que si vous n'avez pas de modifications non sauvegardées. Si vous êtes entre deux commits, git checkout ne marchera pas. Du coup il vous faudra soit faire une sauvegarde (== faire un commit), soit effacer tout pour revenir au commit d'avant.
 
+
+# Revenir en arrière
+J'ai fait des trucs, mais cela ne me convient pas. Comment revenir sur en arrière ? (inspiré par cette [excellente réponse](https://stackoverflow.com/a/4114122/8564105) de Stack Overflow)
+
 ## Effacer pour revenir au commit d'avant
 La fonction `git reset --hard` permet de revenir au commit précédent, en effaçant tout. C'est une commande pratique quand on veut essayer de nouvelles choses, qui nous demandent de virer une partie du code.
+
+## Tout effacer et revenir à un ancien commit
+On peut faire ceci avec :
+
+
+```shell
+git reset --hard 0d1d7fc32
+```
+
 
 # Apprendre à utiliser GitHub
 ## Comprendre les remotes
@@ -86,7 +99,7 @@ Cette technique sert si vous avez déjà le code sur votre ordinateur, et que vo
 ## Récupérer des modifications
 Si une deuxième personne veut bosser avec nous sur le projet, on va récupérer les dernières modifications via git pull.
 
-- `git pull origin master` : me dit les modifications. J'ai synchronisé mon remote avec ma machine locale. 
+- `git pull origin master` : me dit les modifications. J'ai synchronisé mon remote avec ma machine locale.
 
 # Collaborer et maitriser son historique
 Imaginons un moment que vous bossez sur un projet. Vous vous dîtes, mon code est bien, mais j'ai envie d'ajouter une feature à mon site. Les branches sont un super outil pour cela. Une branche est une divergence de la base de code principale, sur laquelle on peut travailler sans crainte. Git nous permet de naviguer facilement entre les branches.
