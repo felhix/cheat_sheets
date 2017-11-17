@@ -1,5 +1,5 @@
 # Des programmes qui tournent en ligne
-Dans ce fichier nous allons voir comment lancer des programmes en serveur via Ruby et Rails.
+Dans ce fichier nous allons voir comment lancer des programmes en serveur via Ruby et Rails, et comment les programmer pour qu'ils tournent régulièrement.
 
 ## Preps
 Pour que cela marche, il faut :
@@ -65,7 +65,7 @@ Bon c'est cool tout ça, mais comment faire pour accéder à l'output de mes tas
 En faisant la commande suivante :
 
 ```shell
-$ heroku logs --psh scheduler
+$ heroku logs --ps scheduler
 ```
 
 Il est possible de voir tous les logs de notre application. Heroku reporte notamment toutes les lignes du genre : `puts "Bonjour ceci est une ligne`. Donc pour avoir le report de ce qui nous intéresse, il suffit de faire :
@@ -122,6 +122,28 @@ end
 ```
 
 Pour appeler mes tasks, il suffit de faire `$ rake nom_de_ma_categorie:nom_de_ma_task`.
+
+## FAQ
+### Un programme qui tourne toutes les semaines ?
+Easy, il suffit de mettre dans notre task une connerie du genre :
+```ruby
+desc "Petite description de ma task !"
+task nom_de_ma_task: :environment do
+	if it_is_monday
+		# fais la task
+	else
+		# ne fais rien
+	end
+end
+
+```
+
+### Un programme qui tourne en boucle ?
+Les temps de serveur coûtent cher, donc passer par Heroku pour ça est fortement déconseillé à cause du prix. Deux solutions : 
+
+- Faire tourner le programme sur un Rasberry Pi
+- Utiliser un serveur privé
+
 
 ## Articles à ce sujet
 
