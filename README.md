@@ -1,5 +1,5 @@
 # cheat_sheets
-Une liste de Cheat Sheets
+Une liste de Cheat Sheets :
 
 - Ruby
   - [Devise](https://github.com/felhix/cheat_sheets/blob/master/Ruby/devise.md)
