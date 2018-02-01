@@ -2,6 +2,7 @@
 Une liste de Cheat Sheets :
 
 - Ruby
+  - [Démarrer un projet Rails heroku-compatible](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Starting_Rails_Heroku_Compatible.md)
   - [Devise](https://github.com/felhix/cheat_sheets/blob/master/Ruby/devise.md)
   - [Asset Pipeline](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Asset_pipeline.md)
   - [Gemfile](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Gemfile.rb)
