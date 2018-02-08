@@ -8,5 +8,6 @@ Une liste de Cheat Sheets :
   - [Gemfile](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Gemfile.rb)
   - [Scheduling tasks online](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Scheduling_Tasks_Online.md)
   - [Services](https://github.com/felhix/cheat_sheets/blob/master/Ruby/Services.md)
+  - [Dotenv](https://github.com/felhix/cheat_sheets/blob/master/Ruby/dotenv.md)
 - Git
   - [Premiers pas avec Git](https://github.com/felhix/cheat_sheets/blob/master/Git/Git.md)

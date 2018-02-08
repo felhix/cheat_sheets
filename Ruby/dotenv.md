@@ -40,10 +40,10 @@ Et avant de faire un commit et de push sur Github, nous allons mettre le fichier
 Et voilà, notre dossier devrait ressembler à ceci :
 
 ```
-.
-├── .env
-├── .gitignore
-└── kikou.rb
+└── TON_DOSSIER
+    ├── .env
+    ├── .gitignore
+    └── kikou.rb
 ```
 
 ## Exemple avec une app Rails
