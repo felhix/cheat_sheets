@@ -152,4 +152,6 @@ Voici quelques best practices quand on travaille sur git :
 
 
 # Aller plus loin
-[Le cours de OpenClassrooms est excellent](https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/creer-son-premier-repository).
+
+- [Le cours de OpenClassrooms est excellent](https://openclassrooms.com/courses/gerer-son-code-avec-git-et-github/creer-son-premier-repository).
+- Voici une autre [cheat sheet](https://gist.github.com/aquelito/8596717)
