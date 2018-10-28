@@ -12,7 +12,7 @@ $ cd nom_de_mon_app
 ```
 
 ## 2. First commit
-En théorie, installer une app rails initialize un git, donc pas besoin de `git commit`. On va donc faire le premier commit. Si l'on veut lier son application Rails à un remote, c'est possible avec `git remote add origin blabla_nom_origine`.
+En théorie, installer une app rails initialize un git, donc pas besoin de `git init`. On va donc faire le premier commit. Si l'on veut lier son application Rails à un remote, c'est possible avec `git remote add origin blabla_nom_origine`.
 
 ```shell
 git add .
